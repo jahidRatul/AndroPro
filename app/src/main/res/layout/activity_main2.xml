@@ -35,4 +35,13 @@
         android:layout_height="wrap_content"
         android:entries="@array/genderArray"
         android:spinnerMode="dropdown" />
+    <Button
+        android:id="@+id/go3rdActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:layout_gravity="center"
+
+
+        />
 </LinearLayout>
