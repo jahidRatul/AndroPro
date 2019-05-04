@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -16,12 +17,22 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        final EditText userName =  findViewById(R.id.placeName);
+        final EditText userEmail = findViewById(R.id.placeEmail);
+
+
+
         final Button button = findViewById(R.id.go3rdActivity);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
+                String NameValue = userName.getText().toString();
+                String EmailValue = userEmail.getText().toString();
+                intent.putExtra("Name",NameValue);
+                intent.putExtra("Email",EmailValue);
                 startActivity(intent);
+
             }
         });
 
