@@ -33,7 +33,7 @@
         android:id="@+id/genderSpinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/genderArray"
+        android:entries="@array/divisionArray"
         android:spinnerMode="dropdown" />
     <Button
         android:id="@+id/go3rdActivity"

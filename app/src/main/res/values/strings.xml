@@ -3,9 +3,15 @@
     <string name="input_all_the_values">Input All The Values</string>
     <string name="place_your_name">Place your name</string>
     <string name="place_your_email">Place your email</string>
-    <string-array name="genderArray">
-        <item>male</item>
-        <item>Female</item>
+    <string-array name="divisionArray">
+        <item>Dhaka</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Rajshahi</item>
+        <item>Barisal</item>
+        <item>Chittagong</item>
+        <item>Rangpur</item>
+
 
     </string-array>
 </resources>

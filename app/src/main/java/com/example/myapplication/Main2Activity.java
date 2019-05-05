@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
         final EditText userName =  findViewById(R.id.placeName);
         final EditText userEmail = findViewById(R.id.placeEmail);
-
+        final Spinner spinner = findViewById(R.id.genderSpinner);
 
 
         final Button button = findViewById(R.id.go3rdActivity);
@@ -29,18 +29,21 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                 Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
                 String NameValue = userName.getText().toString();
                 String EmailValue = userEmail.getText().toString();
+                String SpinnerText = spinner.getSelectedItem().toString();
                 intent.putExtra("Name",NameValue);
                 intent.putExtra("Email",EmailValue);
+                intent.putExtra("SpinnerText",SpinnerText);
+
                 startActivity(intent);
 
             }
         });
 
 
-        Spinner spinner = findViewById(R.id.genderSpinner);
+//        Spinner spinner = findViewById(R.id.genderSpinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.genderArray, android.R.layout.simple_spinner_item);
+                R.array.divisionArray, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
@@ -54,6 +57,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
 
     }
 
