@@ -12,36 +12,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/input_all_the_values"
-        android:textSize="20pt"/>
+        android:textSize="20pt" />
 
     <EditText
         android:id="@+id/placeName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:hint="@string/place_your_name"
-        android:textSize="20pt"/>
+        android:inputType="textPersonName"
+        android:textSize="20pt" />
+
     <EditText
         android:id="@+id/placeEmail"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
         android:hint="@string/place_your_email"
-        android:textSize="20pt"/>
+        android:inputType="textEmailAddress"
+        android:textSize="20pt" />
 
     <Spinner
-        android:id="@+id/genderSpinner"
+        android:id="@+id/divisionSpinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:entries="@array/divisionArray"
         android:spinnerMode="dropdown" />
+
+    <RadioGroup
+        android:id="@+id/radioGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+            android:text="Male " />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Female" />
+    </RadioGroup>
+
     <Button
         android:id="@+id/go3rdActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="submit"
         android:layout_gravity="center"
-
-
-        />
+        android:text="submit" />
 </LinearLayout>
