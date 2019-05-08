@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -14,6 +15,7 @@ import android.widget.Spinner;
 public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     String gender="male";
+    String agreement="Yes,Every information  is all true.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                 intent.putExtra("Email",EmailValue);
                 intent.putExtra("SpinnerText",SpinnerText);
                 intent.putExtra("checked",gender);
+                intent.putExtra("agreementCheck",agreement);
 
                 startActivity(intent);
 
@@ -88,6 +91,28 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                     gender="female";
                 break;
         }
+    }
+
+
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+
+        // Check which checkbox was clicked
+//        switch(view.getId()) {
+//            case R.id.agreementBox:
+//                if (checked)
+//               agreement= "Yes,Every information  is all true.";
+//            else
+//               agreement="No,Check again please";
+//                break;
+//        }
+
+        if (checked)
+               agreement= "Yes,Every information  is all true.";
+            else
+               agreement="No,Check again please";
     }
 }
 

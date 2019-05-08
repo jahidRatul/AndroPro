@@ -3,6 +3,7 @@
     <string name="input_all_the_values">Input All The Values</string>
     <string name="place_your_name">Place your name</string>
     <string name="place_your_email">Place your email</string>
+    <string name="every_information_i_have_provided_is_all_true">Every information i have provided is all true.</string>
     <string-array name="divisionArray">
         <item>Dhaka</item>
         <item>Khulna</item>
