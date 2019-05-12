@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
@@ -7,103 +7,112 @@
     android:orientation="vertical"
     tools:context=".Main2Activity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/input_all_the_values"
-        android:textSize="20pt" />
-
-    <EditText
-        android:id="@+id/placeName"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/place_your_name"
-        android:inputType="textPersonName"
-        android:textSize="20pt" />
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/placeEmail"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/place_your_email"
-        android:inputType="textEmailAddress"
-        android:textSize="20pt" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_all_the_values"
+            android:textSize="20pt" />
 
-    <Spinner
-        android:id="@+id/divisionSpinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/divisionArray"
-        android:spinnerMode="dropdown"
-        android:layout_marginTop="20dp" />
+        <EditText
+            android:id="@+id/placeName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/place_your_name"
+            android:inputType="textPersonName"
+            android:textSize="20pt" />
 
-    <RadioGroup
-        android:id="@+id/radioGrp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/placeEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/place_your_email"
+            android:inputType="textEmailAddress"
+            android:textSize="20pt" />
 
-        <RadioButton
-            android:id="@+id/radio_male"
+        <Spinner
+            android:id="@+id/divisionSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/divisionArray"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="20dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="Male " />
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Female" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/agreementBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:onClick="onRadioButtonClicked"
-            android:text="Male " />
+            android:onClick="onCheckboxClicked"
+            android:layout_marginTop="20dp"
+            android:text="@string/every_information_i_have_provided_is_all_true"/>
 
-        <RadioButton
-            android:id="@+id/radio_female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Female" />
-    </RadioGroup>
-
-    <CheckBox
-        android:id="@+id/agreementBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:onClick="onCheckboxClicked"
-        android:layout_marginTop="20dp"
-        android:text="@string/every_information_i_have_provided_is_all_true"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="5dp" >
-
-        <Button
-            android:id="@+id/btnSelectPhoto"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select Photo" />
+            android:gravity="center"
+            android:padding="5dp" >
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnSelectPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Photo" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="10dp">
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/ivImage"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_launcher" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/go3rdActivity"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:src="@drawable/ic_launcher" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="submit"
+            android:layout_marginTop="20pt"/>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/go3rdActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="submit"
-        android:layout_marginTop="20pt"/>
 
-</LinearLayout>
+
+</ScrollView>
